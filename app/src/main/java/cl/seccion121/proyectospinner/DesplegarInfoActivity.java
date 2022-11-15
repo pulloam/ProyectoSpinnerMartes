@@ -20,11 +20,12 @@ public class DesplegarInfoActivity extends AppCompatActivity {
         referencias();
         eventos();
 
-        String nombre = getIntent().getExtras().getString("datoNombre");
-        tvNombre.setText(nombre);
+        Usuario usr = (Usuario) getIntent().getExtras().getSerializable("el_usuario");
+        tvNombre.setText(usr.getNombre());
     }
 
 
+    //region Eventos y Referencias
     private void eventos() {
         btnVolver.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,4 +39,5 @@ public class DesplegarInfoActivity extends AppCompatActivity {
         tvNombre = findViewById(R.id.tvNombre);
         btnVolver = findViewById(R.id.btnVolver);
     }
+    //endregion
 }
