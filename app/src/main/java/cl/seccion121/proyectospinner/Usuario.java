@@ -8,6 +8,11 @@ public class Usuario implements Serializable {
     private String clave;
     private int edad;
 
+    public String toString(){
+        return "Usuario :" + nombre;
+    }
+
+
     //region constructores
     public Usuario(){}
 
